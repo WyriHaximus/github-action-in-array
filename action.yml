@@ -1,0 +1,21 @@
+name: 'Find item in CSV list'
+description: 'Check if item is present in CSV list'
+branding:
+  icon: 'map-pin'
+  color: 'blue'
+inputs:
+  needle:
+    description: 'The item to find in `haystack`'
+    type: string
+    required: true
+  haystack:
+    description: 'CSV list of items'
+    type: string
+    required: true
+outputs:
+  status:
+    description: 'Success or failure'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
